@@ -24,7 +24,7 @@ export default function Home() {
     <div className='flex flex-col justify-center h-screen'>
       <Head>
         <title>Google</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
 
       {/* Header */}
