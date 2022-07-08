@@ -1,4 +1,3 @@
-import axios from "axios";
 import Head from "next/head"
 import { useRouter } from "next/router";
 import Header from "../components/organisms/Header"
@@ -33,7 +32,7 @@ export async function getServerSideProps(context) {
 		headers: {
 			"X-User-Agent": "desktop",
 			"X-Proxy-Location": "SG",
-			"X-RapidAPI-Key": "60372be3f7msh238aa1217ff519bp19cf06jsncfdcb930081a",
+			"X-RapidAPI-Key": process.env.API_KEY,
 			"X-RapidAPI-Host": "google-search3.p.rapidapi.com",
 		},
 	});
