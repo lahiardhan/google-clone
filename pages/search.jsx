@@ -1,5 +1,6 @@
 import Head from "next/head"
 import { useRouter } from "next/router";
+import Footer from "../components/organisms/Footer";
 import Header from "../components/organisms/Header"
 import SearchResults from "../components/organisms/SearchResults";
 
@@ -18,6 +19,9 @@ function Search({data}) {
 
       {/* Search Results */}
       <SearchResults data={data}/>
+
+      {/* Footer */}
+      <Footer />
     </div>
   )
 }
