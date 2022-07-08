@@ -4,7 +4,7 @@ import React from 'react'
 function Avatar({url, className}) {
   return (
     <img 
-      className={`h-10 rounded-full cursor-pointer transition duration-150 transform hover:scale-110 ${className}`}
+      className={`h-12 p-[5px] rounded-full cursor-pointer transition duration-150 transform hover:bg-gray-100 ${className}`}
       loading='lazy'
       src={url}
       alt='profile picture'

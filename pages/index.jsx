@@ -41,7 +41,7 @@ export default function Home() {
           <p className='link'>Images</p>
 
           {/* Icon */}
-          <ViewGridIcon className='h-10 w-10 p-2 rounded-full hover:bg-gray-100 cursor-pointer'/>
+          <ViewGridIcon className='h-12 w-12 p-2 rounded-full hover:bg-gray-100 cursor-pointer'/>
 
           {/* Avatar */}
           <Avatar url={'avatar.png'} />

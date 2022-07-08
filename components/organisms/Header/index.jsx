@@ -1,4 +1,5 @@
-import { MicrophoneIcon, SearchIcon, XIcon } from '@heroicons/react/solid';
+import { MicrophoneIcon, SearchIcon, XIcon, ViewGridIcon } from '@heroicons/react/solid';
+import { CogIcon } from '@heroicons/react/outline'
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { useRef } from 'react';
@@ -41,11 +42,16 @@ function Header() {
             className='h-7 text-gray-500 cursor-pointer transition duration-100 transform hover:scale-125 sm:mr-3'
             onClick={() => searchInputRef.current.value = ''}
           />
-          <MicrophoneIcon className='h-6 mr-3 hidden sm:inline-flex text-blue-500 border-l-2 pl-4'/>
-          <SearchIcon className='h-6 hidden sm:inline-flex text-blue-500'/>
+          <MicrophoneIcon className='h-6 mr-3 hidden sm:inline-flex text-blue-500 border-l-2 pl-4 cursor-pointer' />
+          <SearchIcon className='h-6 hidden sm:inline-flex text-blue-500 cursor-pointer'/>
           <button hidden onClick={search}>Search</button>
         </form>
-        <Avatar url='avatar.png' className='ml-auto'/>
+
+        <div className='flex space-x-4 items-center ml-auto'>
+          <CogIcon className='h-12 w-12 p-2 rounded-full hover:bg-gray-100 cursor-pointer' />
+          <ViewGridIcon className='h-12 w-12 p-2 rounded-full hover:bg-gray-100 cursor-pointer' />
+          <Avatar url='avatar.png' />
+        </div>
       </div>
 
       {/* Header Option Components */}
