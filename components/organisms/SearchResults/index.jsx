@@ -1,28 +1,28 @@
 import PaginationButton from "../../atoms/PaginationButton";
 
-function SearchResults({ results }) {
-	console.log(results);
+function SearchResults({ data }) {
+	console.log(data);
 
 	return (
 		<div className="mx-auto w-full px-3 sm:px-[5%] md:px-[14%] lg:pl-52">
 			<p className="text-gray-600 text-md mb-5 mt-3">
-				About {results.searchInformation?.formattedTotalResults} results 
-            ({results.searchInformation?.formattedSearchTime} seconds)
+				About {data.total} results 
+            ({data.ts} seconds)
 			</p>
 
-         {results.items?.map((results) => (
-            <div key={results.link} className="max-w-xl mb-8">
+         {data.results?.map((item, index) => (
+            <div key={index} className="max-w-xl mb-8">
                <div className="group">
-                  <a href={results.link} className="text-sm line-clamp-1">
-                     {results.formattedUrl}
+                  <a href={item.link} className="text-sm text-gray-500 line-clamp-1">
+                     {item.link.length > 30 ? item.link.substring(0, 30) : item.link}
                   </a>
-                  <a href={results.link}>
+                  <a href={item.link}>
                      <h2 className="truncate text-xl text-blue-800 font-medium group-hover:underline">
-                        {results.title}
+                        {item.title}
                      </h2>
                   </a>
                </div>
-               <p className="line-clamp-2">{results.snippet}</p>
+               <p className="line-clamp-2">{item.description}</p>
             </div>
          ))}
 
